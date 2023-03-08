@@ -27,11 +27,16 @@ let message = 'Prezzo del biglietto è: ';
 
 /*CONDIZIONALI*/
 if(AgeUtente < 18) {
-    message += (TotalTicketPrice * MinorDiscount).toFixed(2);
+    message += (TotalTicketPrice * MinorDiscount).toFixed(2) +' &euro;';
 }
 if(AgeUtente > 65) {
-    message+= (TotalTicketPrice * AdultDiscount).toFixed(2);
+    message+= (TotalTicketPrice * AdultDiscount).toFixed(2) +' &euro;';
 }
-document.getElementById('title').innerHTML = `<em>${message}</em>`;
+else if ((AgeUtente >18) && (AgeUtente < 65)) {
+    message += (TotalTicketPrice).toFixed(2) +' &euro;';
+}
+document.getElementById('title').innerHTML =
+
+ `<h1>${message}</h1>`;
 
     
