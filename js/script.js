@@ -19,8 +19,8 @@ let KmPrice = 0.21;
 let TotalTicketPrice = (KmTravelled * KmPrice);
 
 /*VARIABILI SCONTI */
-let AdultDiscount = 0.20;
-let MinorDiscount = 0.40;
+let AdultDiscount = 0.40;
+let MinorDiscount = 0.20;
 
 /*MESSAGGIO*/
 let message = 'Prezzo del biglietto è: ';
