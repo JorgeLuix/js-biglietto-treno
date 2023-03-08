@@ -8,12 +8,30 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 
 */
 
-/*VARIABILI
+/*VARIABILI*/
 
-*/
+/*COSTANTI*/
+
 const KmTravelled = parseInt(prompt('km percorsi'));
 const AgeUtente = parseInt(prompt('Età utente'));
 
-let TotalPrice;
 let KmPrice = 0.21;
+let TotalTicketPrice = (KmTravelled * KmPrice);
 
+/*VARIABILI SCONTI */
+let AdultDiscount = 0.20;
+let MinorDiscount = 0.40;
+
+/*MESSAGGIO*/
+let message = 'Prezzo del biglietto è: ';
+
+/*CONDIZIONALI*/
+if(AgeUtente < 18) {
+    message += (TotalTicketPrice * MinorDiscount).toFixed(2);
+}
+if(AgeUtente > 65) {
+    message+= (TotalTicketPrice * AdultDiscount).toFixed(2);
+}
+document.getElementById('title').innerHTML = `<em>${message}</em>`;
+
+    
