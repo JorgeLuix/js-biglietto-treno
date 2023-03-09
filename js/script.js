@@ -12,6 +12,7 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 
 /*COSTANTI*/
 
+
 const KmTravelled = parseInt(prompt('km percorsi'));
 const AgeUtente = parseInt(prompt('Età utente'));
 
@@ -27,10 +28,10 @@ let message = 'Prezzo del biglietto è: ';
 
 /*CONDIZIONALI*/
 if(AgeUtente < 18) {
-    message += (TotalTicketPrice * MinorDiscount).toFixed(2) +' &euro;';
+    message += (TotalTicketPrice - MinorDiscount).toFixed(2) +' &euro;';
 }
 if(AgeUtente > 65) {
-    message+= (TotalTicketPrice * AdultDiscount).toFixed(2) +' &euro;';
+    message+= (TotalTicketPrice - AdultDiscount).toFixed(2) +' &euro;';
 }
 else if ((AgeUtente >18) && (AgeUtente < 65)) {
     message += (TotalTicketPrice).toFixed(2) +' &euro;';
